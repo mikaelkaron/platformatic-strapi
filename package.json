@@ -1,0 +1,38 @@
+{
+  "name": "@platformatic/strapi",
+  "version": "0.0.0",
+  "description": "Platformatic strapi Stackable",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "pnpm run lint && borp --concurrency=1 --no-timeout",
+    "coverage": "pnpm run lint && borp -C -X test -X test/fixtures --concurrency=1 --no-timeout",
+    "gen-schema": "node lib/schema.js > schema.json",
+    "gen-types": "json2ts > config.d.ts < schema.json",
+    "build": "pnpm run gen-schema && pnpm run gen-types",
+    "prepublishOnly": "pnpm run build",
+    "lint": "eslint"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/platformatic/strapi.git"
+  },
+  "author": "Platformatic Inc. <oss@platformatic.dev> (https://platformatic.dev)",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/platformatic/strapi/issues"
+  },
+  "homepage": "https://github.com/platformatic/strapi#readme",
+  "dependencies": {
+    "@platformatic/basic": "^2.74.1",
+    "@platformatic/utils": "^2.74.1"
+  },
+  "devDependencies": {
+    "borp": "^0.20.0",
+    "eslint": "9",
+    "json-schema-to-typescript": "^15.0.1",
+    "neostandard": "^0.12.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.5.4"
+  }
+}
