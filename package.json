@@ -25,9 +25,11 @@
   "homepage": "https://github.com/platformatic/strapi#readme",
   "dependencies": {
     "@platformatic/basic": "^2.74.1",
-    "@platformatic/utils": "^2.74.1"
+    "@platformatic/utils": "^2.74.1",
+    "semver": "^7.7.2"
   },
   "devDependencies": {
+    "@platformatic/config": "^2.74.1",
     "borp": "^0.20.0",
     "eslint": "9",
     "json-schema-to-typescript": "^15.0.1",
