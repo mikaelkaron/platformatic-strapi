@@ -2,6 +2,7 @@ import {
   BaseStackable,
   transformConfig as basicTransformConfig,
   cleanBasePath,
+  ensureTrailingSlash,
   errors,
   resolvePackage,
   schemaOptions
